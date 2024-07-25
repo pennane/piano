@@ -1,0 +1,101 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.piano {
+    position: relative;
+}
+
+
+.key {
+    overflow: hidden;
+}
+
+
+.white .key {
+    padding-top: 6rem;
+    background-color: white;
+    color: black;
+    width: 2rem;
+    margin: 0;
+    height: 8rem;
+    border: 0;
+    border-radius: 0 0 .5rem .5rem;
+    margin: .05rem;
+}
+
+.black {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.black .key {
+    padding-top: 3.75rem;
+    background-color: black;
+    color: white;
+    border: none;
+    width: 2rem;
+    height: 6rem;
+    border: 0;
+    border-radius: 0 0 0.5rem 0.5rem;
+    margin: 0.05rem;
+}
+
+.black .key:nth-of-type(1) {
+    margin-left: 1rem
+}
+
+
+.black .key:nth-of-type(3) {
+    margin-left: 2.25rem
+}
+
+.black .key:nth-of-type(6) {
+    margin-left: 2.25rem
+}
+
+.black .key:nth-of-type(8) {
+    margin-left: 2.25rem
+}
+
+
+.black .key.active {
+    background-color: #3e3802;
+}
+
+.white .key.active {
+    background-color: #f0e68c;
+}
